@@ -1,0 +1,147 @@
+/* === Demo Section === */
+.demo-section {
+  width: 100%;
+  max-width: 1250px;
+  margin: 5rem auto 3rem;
+  padding: 3.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  box-sizing: border-box;
+}
+
+/* === Demo Grid === */
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem 2rem;
+  justify-items: center;
+  align-items: start;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* === Demo Card === */
+.demo-card {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 1.8rem 1.5rem;
+  text-align: center;
+  width: 100%;
+  max-width: 310px;
+  min-height: 360px;
+  border: 1px solid rgba(181, 102, 255, 0.25);
+  box-shadow:
+    0 0 12px rgba(255, 255, 255, 0.04),
+    0 0 18px rgba(181, 102, 255, 0.10),
+    inset 0 0 10px rgba(138, 43, 226, 0.10);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  will-change: transform, box-shadow;
+}
+
+/* === Hover Glow === */
+.demo-card:hover {
+  transform: translateY(-4px);
+  border-color: #b566ff;
+  box-shadow:
+    0 0 16px rgba(181, 102, 255, 0.35),
+    0 0 30px rgba(138, 43, 226, 0.25),
+    0 0 45px rgba(255, 0, 255, 0.15);
+}
+
+/* === Demo Title — PURPLE NEON === */
+.demo-card h3 {
+  margin-bottom: 0.8rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #b566ff;
+  letter-spacing: 0.5px;
+
+  text-shadow:
+    0 0 6px #b566ff,
+    0 0 12px #8a2be2,
+    0 0 18px rgba(255, 0, 255, 0.35);
+}
+
+/* === Demo Description === */
+.demo-card p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-bottom: 1.2rem;
+}
+
+/* === Demo Buttons — PURPLE GLOW === */
+.demo-btn {
+  display: inline-block;
+  padding: 0.7rem 1.7rem;
+  background: rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(181, 102, 255, 0.35);
+  border-radius: 12px;
+
+  color: #b566ff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+
+  box-shadow:
+    0 0 8px rgba(181, 102, 255, 0.25),
+    0 0 18px rgba(138, 43, 226, 0.18);
+}
+
+.demo-btn:hover {
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+  border-color: #b566ff;
+
+  box-shadow:
+    0 0 12px #b566ff,
+    0 0 24px #8a2be2,
+    0 0 32px #ff00ff;
+
+  transform: translateY(-2px);
+}
+/* === Demo Image === */
+.demo-card img {
+  width: 100%;
+  height: 180px;        /* consistent height for all demo images */
+  object-fit: cover;    /* ensures image fills area without distortion */
+  border-radius: 12px;
+  margin-bottom: 1rem;  /* spacing between image and title */
+  flex-shrink: 0;       /* prevents image from shrinking */
+}
+
+/* === Responsive Layouts === */
+@media (max-width: 1024px) {
+  .demo-grid {
+    gap: 2.5rem 1.8rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .demo-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .demo-card {
+    max-width: 95%;
+    padding: 1.5rem 1.2rem;
+    min-height: auto;
+  }
+
+  .demo-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
