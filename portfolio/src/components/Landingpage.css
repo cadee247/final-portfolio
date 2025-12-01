@@ -7,13 +7,26 @@
   flex-direction: column;
   justify-content: center;
   gap: 3rem;
-  background: #0c0c0c;
+background:
+  radial-gradient(circle at top left, rgba(255,0,247,0.06), transparent 70%),
+  radial-gradient(circle at bottom right, rgba(178,0,255,0.06), transparent 70%),
+  #0c0c0c;
+
+
+
+
 }
 
-/* Center box */
 .landing-box {
   text-align: center;
+  border-radius: 20px; /* smooth curved corners */
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.02); /* subtle glassy effect */
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,0,247,0.08); /* faint purple outline */
+  box-shadow: 0 0 25px rgba(255, 0, 247, 0.06); /* soft purple glow */
 }
+
 
 /* Title = white */
 .landing-title {
