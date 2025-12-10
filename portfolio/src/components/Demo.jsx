@@ -3,7 +3,7 @@ import React from "react";
 import "./Demo.css";
 
 import JWTImg from "../assets/JWT.jpg";
-import SoccerImg from "../assets/Soccer.jpg";
+
 
 const demoData = [
   {
@@ -24,12 +24,7 @@ const demoData = [
     description: "SQL-powered shopping cart app demonstrating database design and queries.",
     image: SoccerImg,
   },
-  {
-    title: "Soccer League Application Backend Demo",
-    link: "https://youtu.be/HfArUwUTXbk",
-    description: "Back-end demonstration of a Java application.",
-    image: SoccerImg,
-  },
+
 ];
 
 function Demo() {
