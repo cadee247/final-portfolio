@@ -8,7 +8,7 @@ import BlogImg from "../assets/Blog.jpg";
 import HTMXImg from "../assets/HTMX.jpg";
 import PythonImg from "../assets/Python.jpg";
 import ExpenseImg from "../assets/Expense.jpg";
-
+import SoccerImg from "../assets/Soccer.jpg";
 const projectData = [
   {
     title: "🚀 HTMX To-Do List",
@@ -42,6 +42,18 @@ const projectData = [
       "Full-stack MERN application Skinetic builds your perfect routine in seconds. Just pick your product, skin type, and time of the day, and it reveals exactly how the product benefits your skin.",
     link: "https://skinetic-1-duza.onrender.com/n",
     image: SkineticImg,
+  },
+    {
+    title: "Soccer League Application Backend Demo(Java)",
+    description: "Back-end demonstration of a Java application.",
+    link: "https://youtu.be/HfArUwUTXbk",
+    image: SoccerImg,
+  },
+      {
+    title: "Spring-boot REST API Demo",
+    description: "Spring Back-end app, exposing a REST API. Tested and documented with Swagger, Insomnia, and the H2 console.",
+    link: "https://youtu.be/zkZedrUMF_Y?si=2nPN-r_ciqM8VGQg",
+    image: SoccerImg,
   },
 ];
 
