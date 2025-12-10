@@ -3,7 +3,7 @@ import React from "react";
 import "./Demo.css";
 
 import JWTImg from "../assets/JWT.jpg";
-
+import SoccerImg from "../assets/Soccer.jpg";
 
 const demoData = [
   {
