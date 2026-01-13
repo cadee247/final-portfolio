@@ -1,0 +1,64 @@
+.skill-orbs-section {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.skills-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem; /* Horizontal spacing between columns */
+  margin-top: 2rem;
+}
+
+.skills-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem; /* Vertical spacing between orbs in the column */
+}
+
+.column-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Reuse your previous orb styles */
+.orb {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: 0.4s ease;
+  animation: float 4s ease-in-out infinite;
+  box-shadow: 0 0 25px var(--orbColor);
+}
+
+.orb-icon {
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+}
+
+.orb-label {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  z-index: 2;
+}
+
+/* Float animation */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}

@@ -1,0 +1,115 @@
+/* === CONTACT SECTION CONTAINER === */
+.section-container {
+  min-height: 80vh;
+  padding: 5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  /* Futuristic soft glow background */
+  background: radial-gradient(
+    circle at top,
+    rgba(0, 255, 234, 0.06),
+    rgba(0, 0, 0, 0.85)
+  );
+
+  border-top: 1px solid rgba(0, 255, 224, 0.15);
+  border-bottom: 1px solid rgba(0, 255, 224, 0.15);
+
+  backdrop-filter: blur(12px);
+  box-shadow:
+    inset 0 0 25px rgba(0, 255, 234, 0.05),
+    inset 0 0 40px rgba(138, 43, 226, 0.05);
+}
+
+/* === HEADING === */
+.section-container h2 {
+  color: #00ffe0;
+  font-size: 2.9rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+
+  text-shadow:
+    0 0 6px #00ffe0,
+    0 0 12px #8a2be2,
+    0 0 18px #ff00ff;
+}
+
+/* === PARAGRAPH === */
+.section-container p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+
+/* === CONTACT LIST === */
+.section-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section-container li {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.15rem;
+  margin: 1.1rem 0;
+  letter-spacing: 0.3px;
+}
+
+/* === LINKS with Neon Hover Line === */
+.section-container a {
+  color: #00ffe0;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.section-container a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, #00ffe0, #8a2be2, #ff00ff);
+  border-radius: 2px;
+  transition: width 0.35s ease;
+}
+
+.section-container a:hover {
+  color: #ff00ff;
+  text-shadow: 0 0 6px #ff00ff;
+}
+
+.section-container a:hover::after {
+  width: 100%;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .section-container h2 {
+    font-size: 2.3rem;
+  }
+
+  .section-container p {
+    font-size: 1.05rem;
+  }
+
+  .section-container li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-container h2 {
+    font-size: 2rem;
+  }
+
+  .section-container p {
+    font-size: 0.95rem;
+  }
+}

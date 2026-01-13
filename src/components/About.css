@@ -1,0 +1,110 @@
+/* Container */
+.section-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Heading glow */
+.text-glow {
+  color: #fff;
+  text-shadow: 
+    0 0 5px rgba(255, 0, 247, 0.6),
+    0 0 10px rgba(255, 0, 247, 0.4),
+    0 0 15px rgba(255, 0, 247, 0.3);
+  transition: text-shadow 0.3s ease;
+}
+
+/* Gradient name */
+.gradient-name {
+  background: linear-gradient(135deg, #ff00f7, #b700ff, #ff006a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  text-shadow: 0 0 5px rgba(255, 0, 247, 0.5);
+}
+
+/* Paragraph styling */
+.section-container p {
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.section-container p:hover {
+  color: #ffb0f7;
+}
+
+/* Heading underline */
+.section-container h2 {
+  position: relative;
+}
+
+.section-container h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff00f7, #b700ff, #ff006a);
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* Personality / Professional Tags */
+.tags {
+  margin-top: 20px;
+}
+
+.tag {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff00f7, #b700ff, #ff006a);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  box-shadow: 0 2px 6px rgba(255,0,247,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+.icon-tags {
+  margin-top: 20px;
+}
+
+/* Icon / Personality Tags */
+.icon-tags {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.icon-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 50px; /* pill shape */
+  background: linear-gradient(135deg, #ff6ec7, #a259ff);
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
+  white-space: nowrap; /* prevent line breaks inside tag */
+}
+
+.icon-tag svg {
+  font-size: 0.9rem;
+}
+
+/* Hover effect: subtle lift + soft glow */
+.icon-tag:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 8px rgba(255, 110, 199, 0.4);
+}
+
+
+.tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255,0,247,0.5);
+}

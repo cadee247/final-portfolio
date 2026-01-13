@@ -1,0 +1,144 @@
+.skill-orbs-section {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+/* Grid layout */
+.orb-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.5rem; /* increased from 2.5rem to 3.5rem */
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+/* Orb Container */
+.orb {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  cursor: pointer;
+  transition: 0.4s ease;
+  animation: float 4s ease-in-out infinite;
+
+  box-shadow: 0 0 25px var(--orbColor);
+}
+
+/* Glowing aura ring */
+.orb-aura {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--orbColor), transparent 70%);
+  opacity: 0.25;
+  filter: blur(18px);
+  transition: 0.4s ease;
+}
+
+/* Orbiting particles */
+.orb-particles {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 1px dashed rgba(255,255,255,0.12);
+  animation: spin 12s linear infinite;
+  pointer-events: none;
+}
+
+.orb-particles::before,
+.orb-particles::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--orbColor);
+  border-radius: 50%;
+  top: -4px;
+  left: 50%;
+}
+
+/* Icon */
+.orb-icon {
+  width: 55px;
+  height: 55px;
+  opacity: 0.95;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.orb:hover .orb-icon {
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* Labels */
+.orb-label {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  z-index: 2;
+}
+
+/* Button */
+.orb-button {
+  margin-top: 8px;
+  padding: 4px 12px;
+  background: linear-gradient(135deg, var(--orbColor) 0%, rgba(75,0,130,0.8) 100%);
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  z-index: 2;
+}
+
+.orb-button:hover {
+  transform: translateY(12px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Hover Effects */
+.orb:hover {
+  transform: scale(1.18) rotate(2deg);
+  box-shadow: 0 0 38px var(--orbColor);
+}
+
+.orb:hover .orb-aura {
+  opacity: 0.45;
+  filter: blur(24px);
+}
+
+.orb:hover .orb-button {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Float animation */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Orbital rotation animation */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}

@@ -1,0 +1,157 @@
+/* === Base Styles === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: #0a0a0a;
+  color: #e5e5e5;
+  overflow-x: hidden;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* === Global Section Titles (Purple Neon) === */
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ba55d3;
+  text-shadow:
+    0 0 6px #ba55d3,
+    0 0 12px #8a2be2,
+    0 0 20px rgba(255, 0, 255, 0.35);
+}
+
+/* Remove heavy animated backgrounds */
+#neonCanvas,
+.floating-particle {
+  display: none !important;
+}
+
+/* === Clean Modern Containers (Purple Glass) === */
+.frosted-container,
+.transparent-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 3rem auto 1.5rem;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(138, 43, 226, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(186, 85, 211, 0.08);
+  box-shadow: 0 4px 12px rgba(72, 0, 128, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.frosted-container:hover,
+.transparent-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(138, 43, 226, 0.45);
+}
+
+/* === About Section === */
+#about {
+  width: 90%;
+  max-width: 1100px;
+  margin: 4rem auto;
+  padding: 2.5rem 1.5rem;
+  background: rgba(138, 43, 226, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(186, 85, 211, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(72, 0, 128, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+#about:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(138, 43, 226, 0.45);
+}
+
+#about h2 {
+  font-size: 2rem;
+  color: #ba55d3;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 0 4px #ba55d3, 0 0 8px #8a2be2;
+}
+
+#about p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* === Footer === */
+footer {
+  width: 100%;
+  padding: 2.5rem 1rem;
+  background: rgba(138, 43, 226, 0.05);
+  backdrop-filter: blur(6px);
+  border-top: 1px solid rgba(186, 85, 211, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer p {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+  text-align: center;
+  margin: 0;
+}
+
+footer a {
+  color: #ba55d3;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 0.3rem;
+  transition: all 0.2s ease;
+}
+
+footer a:hover {
+  opacity: 0.8;
+}
+
+/* === Smooth Scrolling === */
+html {
+  scroll-behavior: smooth;
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+  #landing h1 { font-size: 2rem; }
+  #landing p { font-size: 0.95rem; }
+  #about h2 { font-size: 1.8rem; }
+  #about p { font-size: 0.95rem; }
+}
+
+@media (max-width: 640px) {
+  #landing h1 { font-size: 1.7rem; }
+  #landing p { font-size: 0.9rem; }
+  #about h2 { font-size: 1.5rem; }
+  #about p { font-size: 0.9rem; }
+  .contact-buttons { gap: 1rem; flex-direction: column; }
+  .frosted-container,
+  .transparent-section { padding: 2rem 1rem; margin: 2rem auto; }
+}
