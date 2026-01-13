@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Landingpage.css";
-import resume from "../assets/Cadee_Rousseau_Resume.pdf";
+import resume from "../assets/cv/Cadee_Rousseau_Resume.pdf";
 function Landingpage() {
 
   // Intro stays WHITE
