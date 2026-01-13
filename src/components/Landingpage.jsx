@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Landingpage.css";
-
+import resume from "../assets/Cadee_Rousseau_Resume.pdf";
 function Landingpage() {
 
   // Intro stays WHITE
@@ -72,7 +72,9 @@ function Landingpage() {
           <a href="mailto:cadee.dev@outlook.com" className="cool-btn">Email</a>
           <a href="https://www.linkedin.com/in/cadee-rousseau-bb59bb382" className="cool-btn" target="_blank" rel="noreferrer">LinkedIn</a>
           <a href="tel:+27791983027" className="cool-btn">Call</a>
-          <a href="/cv/Cadee_Rousseau_Resume.pdf" className="cool-btn" target="_blank" rel="noreferrer">CV</a>
+          <a href={resume} className="cool-btn" target="_blank" rel="noreferrer">
+            CV
+          </a>
         </div>
       </div>
     </div>
