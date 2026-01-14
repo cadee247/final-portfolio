@@ -84,6 +84,9 @@ function Landingpage() {
 >
   Download CV
 </a>
+<p style={{ color: "white", marginTop: "2rem" }}>
+  Debug: <a href="/cv/Cadee_Rousseau_Resume.pdf" style={{ color: "#ff00f7" }} target="_blank" rel="noreferrer">Open CV directly</a>
+</p>
         </div>
       </div>
     </div>
