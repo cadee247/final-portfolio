@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Landingpage.css";
-import resume from "../assets/cv/Cadee_Rousseau_Resume.pdf";
-function Landingpage() {
 
+function Landingpage() {
   // Intro stays WHITE
   const introText = "Heello there 👋, I'm ";
 
@@ -50,7 +49,6 @@ function Landingpage() {
   return (
     <div className="landing-container">
       <div className="landing-box">
-
         <h1 className="landing-title">
           {typedIntro}
           <span className="sparkle-name">{typedName}</span>
@@ -70,9 +68,21 @@ function Landingpage() {
         <h3 className="contact-title">Let's Connect</h3>
         <div className="contact-btns">
           <a href="mailto:cadee.dev@outlook.com" className="cool-btn">Email</a>
-          <a href="https://www.linkedin.com/in/cadee-rousseau-bb59bb382" className="cool-btn" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a
+            href="https://www.linkedin.com/in/cadee-rousseau-bb59bb382"
+            className="cool-btn"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
           <a href="tel:+27791983027" className="cool-btn">Call</a>
-          <a href={resume} className="cool-btn" target="_blank" rel="noreferrer">
+
+          <a
+            href="/Cadee_Rousseau_Resume.pdf"
+            download="Cadee_Rousseau_Resume.pdf"
+            className="cool-btn"
+          >
             CV
           </a>
         </div>
