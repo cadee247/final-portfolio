@@ -78,7 +78,7 @@ function Landingpage() {
           </a>
           <a href="tel:+27791983027" className="cool-btn">Call</a>
 <a
-  href="/Cadee_Rousseau_Resume.pdf"
+  href="/cv/Cadee_Rousseau_Resume.pdf"
   download="Cadee_Rousseau_Resume.pdf"
   className="cool-btn"
 >
