@@ -82,7 +82,7 @@ function Landingpage() {
   download="Cadee_Rousseau_Resume.pdf"
   className="cool-btn"
 >
-   CV
+  Download CV
 </a>
         </div>
       </div>
