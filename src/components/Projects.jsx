@@ -9,6 +9,7 @@ import HTMXImg from "../assets/HTMX.jpg";
 import PythonImg from "../assets/Python.jpg";
 import ExpenseImg from "../assets/Expense.jpg";
 import SoccerImg from "../assets/Soccer.jpg";
+
 const projectData = [
   {
     title: "🚀 HTMX To-Do List",
@@ -43,17 +44,34 @@ const projectData = [
     link: "https://skinetic-1-duza.onrender.com/n",
     image: SkineticImg,
   },
-    {
+  {
     title: "Soccer League Application Backend Demo(Java)",
     description: "Back-end demonstration of a Java application.",
     link: "https://youtu.be/HfArUwUTXbk",
     image: SoccerImg,
   },
-      {
+  {
     title: "Spring-boot REST API Demo",
-    description: "Spring Back-end app, exposing a REST API. Tested and documented with Swagger, Insomnia, and the H2 console.",
+    description:
+      "Spring Back-end app, exposing a REST API. Tested and documented with Swagger, Insomnia, and the H2 console.",
     link: "https://youtu.be/zkZedrUMF_Y?si=2nPN-r_ciqM8VGQg",
     image: SoccerImg,
+  },
+  {
+    title: "Task manager",
+    description:
+      'The app includes authentication, allowing users to add and manage tasks that are incomplete or need to be completed.',
+    link: "https://www.youtube.com/playlist?list=PLZAqoTx2KcfvSvWWzVSapr4Yy_9NV7Rto",
+    github: "https://github.com/cadee247/Web-Developer-Bootcamp",
+    image: HTMXImg,
+  },
+  {
+    title: "Event AI",
+    description:
+      "A chatbot that provides information about upcoming events in Johannesburg, filtered by category (e.g., music, tech, cooking).",
+    link: "https://www.youtube.com/playlist?list=PLZAqoTx2KcfssF5_o1qA26c4VrAoPHrrU",
+    github: "https://github.com/cadee247/Java-Developer-Bootcamp",
+    image: HTMXImg,
   },
 ];
 
@@ -76,14 +94,26 @@ function Projects() {
             )}
             <h3>{proj.title}</h3>
             <p>{proj.description}</p>
-            <a
-              href={proj.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-btn"
-            >
-              View Project →
-            </a>
+            <div className="project-buttons">
+              <a
+                href={proj.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-btn"
+              >
+                View Project →
+              </a>
+              {proj.github && (
+                <a
+                  href={proj.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-btn github-btn"
+                >
+                  GitHub Repo
+                </a>
+              )}
+            </div>
           </div>
         ))}
       </div>

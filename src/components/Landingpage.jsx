@@ -78,14 +78,15 @@ function Landingpage() {
           </a>
           <a href="tel:+27791983027" className="cool-btn">Call</a>
 <a
-  href="/cv/Cadee_Rousseau_Resume.pdf"
-  download="Cadee_Rousseau_Resume.pdf"
+  href="/cv/resume.pdf"
+  download="resume.pdf"
   className="cool-btn"
 >
   Download CV
 </a>
+
 <p style={{ color: "white", marginTop: "2rem" }}>
-  Debug: <a href="/cv/Cadee_Rousseau_Resume.pdf" style={{ color: "#ff00f7" }} target="_blank" rel="noreferrer">Open CV directly</a>
+  Debug: <a href="/cv/resume.pdf" style={{ color: "#ff00f7" }} target="_blank" rel="noreferrer">Open CV directly</a>
 </p>
         </div>
       </div>
