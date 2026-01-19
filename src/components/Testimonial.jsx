@@ -30,7 +30,7 @@ const testimonialsData = [
     name: "Doggy World",
     role: "Client",
     image: DWImg,
-    text: "Cadee consistently delivers projects that exceed expectations. His React skills are impressive.",
+    text: "Cadee consistently delivers projects that exceed expectations. Her React skills are impressive.",
   },
 ];
 
