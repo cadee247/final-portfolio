@@ -7,7 +7,6 @@ import Demo from "./components/Demo";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Testimonial from "./components/Testimonial";
-import Skills from "./components/Skills";
 import Architecture from "./components/Architecture";
 import Footer from "./components/Footer";
 
@@ -16,6 +15,8 @@ function App() {
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) return;
+
     const ctx = canvas.getContext("2d");
 
     let width = (canvas.width = window.innerWidth);
@@ -27,6 +28,7 @@ function App() {
       constructor() {
         this.reset();
       }
+
       reset() {
         this.x = Math.random() * width;
         this.y = Math.random() * height;
@@ -37,26 +39,33 @@ function App() {
         this.color = colors[Math.floor(Math.random() * colors.length)];
         this.opacity = Math.random() * 0.5 + 0.3;
       }
+
       update() {
         this.x += Math.cos(this.angle) * this.speed;
         this.y += Math.sin(this.angle) * this.speed;
-        if (this.x < 0 || this.x > width || this.y < 0 || this.y > height)
+
+        if (this.x < 0 || this.x > width || this.y < 0 || this.y > height) {
           this.reset();
+        }
       }
-      draw(ctx) {
+
+      draw() {
         const pulse = 1 + Math.sin(Date.now() / 1500 + this.phase) * 0.2;
+
         ctx.globalAlpha = this.opacity;
         ctx.fillStyle = this.color;
         ctx.shadowBlur = 15;
         ctx.shadowColor = this.color;
+
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius * pulse, 0, Math.PI * 2);
         ctx.fill();
       }
     }
 
-    const circles = Array.from({ length: 80 }, () => new Circle());
+    const circles = Array.from({ length: 60 }, () => new Circle());
 
+    let animationFrameId;
     let lastTime = 0;
     const throttle = 16;
 
@@ -68,14 +77,14 @@ function App() {
 
         circles.forEach((c) => {
           c.update();
-          c.draw(ctx);
+          c.draw();
         });
       }
 
-      requestAnimationFrame(animate);
+      animationFrameId = requestAnimationFrame(animate);
     }
 
-    requestAnimationFrame(animate);
+    animationFrameId = requestAnimationFrame(animate);
 
     const handleResize = () => {
       width = canvas.width = window.innerWidth;
@@ -84,11 +93,15 @@ function App() {
 
     window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      cancelAnimationFrame(animationFrameId);
+    };
   }, []);
 
   return (
     <div className="relative text-white min-h-screen overflow-x-hidden">
+      {/* Background Canvas */}
       <canvas
         ref={canvasRef}
         className="fixed top-0 left-0 w-full h-full -z-50"
