@@ -7,7 +7,7 @@ import DoggyWorldImg from "../assets/doggyworld.png";
 
 
 import EldomaineImg from "../assets/Eldomaine.png";
-import EventAIImg from "../assets/Eventai.png";
+import EventAIImg from "../assets/eventai.png";
 import SkineticImg from "../assets/skinetic.png";
 const projectData = [
   {
