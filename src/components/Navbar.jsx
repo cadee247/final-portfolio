@@ -14,8 +14,9 @@ function Navbar() {
           <li><a href="#landing" onClick={() => setMenuOpen(false)}>Home</a></li>
           <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
           <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
-          <li><a href="#Certificates" onClick={() => setMenuOpen(false)}>Certificates</a></li>
-          <li><a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a></li>
+          {/* <li><a href="#Certificates" onClick={() => setMenuOpen(false)}>Certificates</a></li> */}
+          {/* <li><a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a></li> */}
+          {<li><a href="#architecture" onClick={() => setMenuOpen(false)}>Architecture</a></li>}
           <li><a href="#demo" onClick={() => setMenuOpen(false)}>Demo</a></li>
           <li><a href="#testimonial" onClick={() => setMenuOpen(false)}>Testimonials</a></li>
           

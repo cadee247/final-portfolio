@@ -1,0 +1,177 @@
+/* =========================================
+   ARCHITECTURE SECTION
+========================================= */
+.architecture-section {
+  width: 100%;
+  padding: 6rem 2rem;
+  background-color: #0f0c29;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(168, 85, 247, 0.15), transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(124, 58, 237, 0.15), transparent 60%);
+  color: #f5f3ff;
+  text-align: center;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #a855f7, #7c3aed, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Optional subtitle */
+.architecture-section p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 750px;
+  margin: 0 auto 2rem auto;
+  color: #d8b4fe;
+}
+
+/* Tech stack badges */
+.tech-stack {
+  margin-bottom: 3rem;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 6px 14px;
+  margin: 5px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  color: #c084fc;
+  backdrop-filter: blur(8px);
+}
+
+/* =========================================
+   Architecture Flow
+========================================= */
+.architecture-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Flow Nodes */
+.flow-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Vertical line between nodes */
+.vertical-line {
+  width: 4px;
+  height: 50px;
+  background: linear-gradient(to bottom, #a855f7, #7c3aed);
+  border-radius: 2px;
+}
+
+/* Services Row */
+.services-row {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+/* =========================================
+   Orb Styles
+========================================= */
+.orb {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; /* keeps image inside the orb */
+  transition: all 0.3s ease;
+  box-shadow: 0 0 30px var(--orbColor), inset 0 0 20px rgba(255,255,255,0.03);
+  cursor: default;
+}
+
+/* Hover */
+.orb:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 50px var(--orbColor), 0 0 100px var(--orbColor);
+}
+
+/* =========================================
+   Orb Image
+========================================= */
+
+.orb-img {
+  width: 200px;        /* increased from 60px */
+  height: 90px;       /* increased from 60px */
+  object-fit: contain; /* maintain aspect ratio */
+  max-width: 80%;      /* allow more space inside orb */
+  max-height: 80%;     /* allow more space inside orb */
+  margin-bottom: 10px;
+}
+
+/* Orb Labels */
+.orb-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #f1f5ff;
+  text-align: center;
+}
+
+.orb small {
+  font-size: 0.75rem;
+  color: #d8b4fe;
+  margin-top: 4px;
+}
+
+/* Float Animation */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Footer Note */
+.footer-note {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #d8b4fe;
+}
+
+/* GitHub Button */
+.github-wrapper {
+  margin-top: 2rem;
+}
+
+.github-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 40px;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
+}
+
+.github-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 45px rgba(168, 85, 247, 0.8);
+}

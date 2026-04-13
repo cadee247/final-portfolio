@@ -8,9 +8,11 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Testimonial from "./components/Testimonial";
 import Skills from "./components/Skills";
+import Architecture from "./components/Architecture";
+
 
 import Footer from "./components/Footer";
-import CertOrbs from "./components/certs"; // matches export default
+// import CertOrbs from "./components/certs"; // matches export default
 
 function App() {
   const canvasRef = useRef(null);
@@ -126,12 +128,15 @@ function App() {
       </div>
 
    {/* Skill Network Section */}
-<section id="Certificates" className="transparent-section">
+{/* <section id="Certificates" className="transparent-section">
   <CertOrbs />
-</section>
+</section> */}
 
-<section id="skills" className="transparent-section">
+{/* <section id="skills" className="transparent-section">
   <Skills />
+</section> */}
+<section id="architecture" className="transparent-section">
+  <Architecture />
 </section>
 
       <section id="demo" className="transparent-section">
